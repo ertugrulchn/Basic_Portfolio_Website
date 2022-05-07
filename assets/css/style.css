@@ -35,10 +35,15 @@ a.active {
 
 /* Nav Bar Codes */
 header {
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 30px 10%;
+  box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px;
 }
 
 .logo {
@@ -82,6 +87,7 @@ header {
   justify-content: flex-end;
   align-items: center;
   padding: 30px 10%;
+  margin-top: 8%;
 }
 
 #hero .texts h2 {
