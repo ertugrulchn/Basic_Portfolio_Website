@@ -18,69 +18,64 @@
     <!--Style File-->
     <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <script>
-      $(document).ready(function () {
-        // Add smooth scrolling to all links
-        $("a").on("click", function (event) {
-          // Make sure this.hash has a value before overriding default behavior
-          if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $("html, body").animate(
-              {
-                scrollTop: $(hash).offset().top,
-              },
-              800,
-              function () {
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-              }
-            );
-          } // End if
-        });
-      });
-    </script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <header>
       <h1
         class="logo"
         style="font-family: 'Water Brush', cursive; color: #e6e4e5"
+        data-aos="fade-right"
+        data-aos-delay="250"
       >
         Meraklı Coder
       </h1>
       <nav>
         <ul class="nav_links">
-          <li><a href="#hero" class="active">Ana Sayfa</a></li>
-          <li><a href="#about">Hakkımızda</a></li>
+          <li data-aos="fade-left" data-aos-delay="250">
+            <a href="#hero" class="active">Ana Sayfa</a>
+          </li>
+          <li data-aos="fade-left" data-aos-delay="500">
+            <a href="#about">Hakkımızda</a>
+          </li>
         </ul>
       </nav>
-      <a href="#contact" class="contact"><button>İletişim</button></a>
+      <a
+        href="#contact"
+        class="contact"
+        data-aos="fade-left"
+        data-aos-delay="750"
+        ><button>İletişim</button></a
+      >
     </header>
 
     <section id="hero">
       <ul class="hero_items">
         <div class="texts">
-          <h2>Meraklı Coder</h2>
-          <p class="type_effetct">
+          <h2 data-aos="fade-right" data-aos-delay="300">Meraklı Coder</h2>
+          <p class="type_effetct" data-aos="fade-right" data-aos-delay="600">
             Kazananlar Hiç Hata Yapmayanlar Değil, <br />
             Asla Pes Etmeyenlerdir.
           </p>
         </div>
       </ul>
-      <img src="./assets/images/Profile2.png" alt="Me" />
+      <img
+        src="./assets/images/Profile2.png"
+        alt="Me"
+        data-aos="fade-left"
+        data-aos-delay="300"
+      />
     </section>
 
     <section id="about">
-      <img src="./assets/images/Profile2.png" alt="Me" />
+      <img
+        src="./assets/images/Profile2.png"
+        alt="Me"
+        data-aos="fade-right"
+        data-aos-delay="300"
+      />
       <ul class="about_items">
-        <p>
+        <p data-aos="fade-left" data-aos-delay="300">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste dolorem
           ea, libero cum dignissimos explicabo! Iure, sit? Enim mollitia
           corporis adipisci nisi? Cum quae necessitatibus voluptatibus quos
@@ -91,42 +86,59 @@
 
     <section id="links">
       <ul class="socila_links">
-        <li><i class="fa-brands fa-facebook"></i></li>
-        <li><i class="fa-brands fa-twitter"></i></li>
-        <li><i class="fa-brands fa-instagram"></i></li>
-        <li><i class="fa-brands fa-discord"></i></li>
-        <li><i class="fa-brands fa-github"></i></li>
+        <li data-aos="fade-down" data-aos-delay="200">
+          <i class="fa-brands fa-facebook"></i>
+        </li>
+        <li data-aos="fade-down" data-aos-delay="400">
+          <i class="fa-brands fa-twitter"></i>
+        </li>
+        <li data-aos="fade-down" data-aos-delay="600">
+          <i class="fa-brands fa-instagram"></i>
+        </li>
+        <li data-aos="fade-down" data-aos-delay="800">
+          <i class="fa-brands fa-discord"></i>
+        </li>
+        <li data-aos="fade-down" data-aos-delay="1000">
+          <i class="fa-brands fa-github"></i>
+        </li>
       </ul>
     </section>
 
     <section id="contact">
       <form action="#">
         <div class="text" style="margin-bottom: 25px">
-          <p>Benimle İletişime Geç</p>
+          <p data-aos="fade-down" data-aos-delay="200">Benimle İletişime Geç</p>
         </div>
-        <div class="form_control">
+        <div class="form_control" data-aos="fade-right" data-aos-delay="200">
           <input type="text" class="form_item name" placeholder="Ad Soyad" />
         </div>
-        <div class="form_control">
+        <div class="form_control" data-aos="fade-right" data-aos-delay="400">
           <input
             type="email"
             class="form_item email"
             placeholder="E-mail Adresiniz"
           />
         </div>
-        <div class="form_control">
+        <div class="form_control" data-aos="fade-right" data-aos-delay="600">
           <textarea
             class="form_item message"
             rows="10"
             placeholder="Mesajınız"
           ></textarea>
         </div>
-        <button type="submit">Gönder</button>
+        <button type="submit" data-aos="fade-right" data-aos-delay="800">Gönder</button>
       </form>
     </section>
 
     <p style="text-align: center; margin: 30px">Tüm Hakları Saklıdır 2022</p>
 
     <script src="./assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1200,
+        once: false,
+      });
+    </script>
   </body>
 </html>

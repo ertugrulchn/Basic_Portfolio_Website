@@ -7,6 +7,10 @@
   background-color: #181617;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
@@ -44,6 +48,7 @@ header {
   align-items: center;
   padding: 30px 10%;
   box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px;
+  z-index: 999;
 }
 
 .logo {
